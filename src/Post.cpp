@@ -2,7 +2,7 @@
 #include "Thread.h"
 
 
-Post::Post(Thread* _thread, std::string _content) : thread(_thread), content(_content)
+Post::Post(Thread* _thread, std::string _content) : content(_content), thread(_thread)
 {
     objects.push_back(this);
 }

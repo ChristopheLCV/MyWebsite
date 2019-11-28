@@ -26,4 +26,24 @@ std::vector<Post*> Thread::Getposts() {
     return result;
 }
 
+bool Thread::HasPost ( Post *post )
+{
+    std::vector<Post*> allPosts;
+    std::vector<Post*>::iterator iter;
+    std::vector<Post*>::iterator iter_end;
+
+    allPosts = Getposts();
+    for ( iter=allPosts.begin(), iter_end=allPosts.end();
+          iter != iter_end;
+          iter ++ )
+    {
+        Post* post = *iter;
+        if (post->Getthread() == this)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 std::vector<Thread*> Thread::objects;

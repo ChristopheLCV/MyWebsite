@@ -25,6 +25,8 @@ class Thread
 
         std::vector<Post*> Getposts();
 
+        bool HasPost ( Post *post );
+
     protected:
 
     private:
